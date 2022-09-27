@@ -1,0 +1,47 @@
+\begin{theindex}
+
+  \item {burstRead}
+    \subitem {I2C\_1.h}, \hyperpage{6}
+  \item {burstWrite}
+    \subitem {I2C\_1.h}, \hyperpage{5}
+
+  \indexspace
+
+  \item {disableTWI}
+    \subitem {I2C\_1.h}, \hyperpage{4}
+
+  \indexspace
+
+  \item {enableTWI}
+    \subitem {I2C\_1.h}, \hyperpage{4}
+
+  \indexspace
+
+  \item {I2C\_1.h}, \hyperpage{3}
+    \subitem {burstRead}, \hyperpage{6}
+    \subitem {burstWrite}, \hyperpage{5}
+    \subitem {disableTWI}, \hyperpage{4}
+    \subitem {enableTWI}, \hyperpage{4}
+    \subitem {I2CInit}, \hyperpage{5}
+    \subitem {initiateRead}, \hyperpage{6}
+    \subitem {initiateWrite}, \hyperpage{5}
+    \subitem {setDeviceAddress}, \hyperpage{4}
+    \subitem {setSCLFrequency}, \hyperpage{3}
+    \subitem {stopTransmission}, \hyperpage{7}
+  \item {I2CInit}
+    \subitem {I2C\_1.h}, \hyperpage{5}
+  \item {initiateRead}
+    \subitem {I2C\_1.h}, \hyperpage{6}
+  \item {initiateWrite}
+    \subitem {I2C\_1.h}, \hyperpage{5}
+
+  \indexspace
+
+  \item {setDeviceAddress}
+    \subitem {I2C\_1.h}, \hyperpage{4}
+  \item {setSCLFrequency}
+    \subitem {I2C\_1.h}, \hyperpage{3}
+  \item {stopTransmission}
+    \subitem {I2C\_1.h}, \hyperpage{7}
+
+\end{theindex}

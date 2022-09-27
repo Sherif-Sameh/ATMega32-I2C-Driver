@@ -1,0 +1,22 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}File Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}File List}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}File Documentation}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}I2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}1.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{3}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Detailed Description}{3}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Function Documentation}{3}{subsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.2.1}setSCLFrequency()}{3}{subsubsection.2.1.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.2.2}enableTWI()}{4}{subsubsection.2.1.2.2}%
+\contentsline {subsubsection}{\numberline {2.1.2.3}disableTWI()}{4}{subsubsection.2.1.2.3}%
+\contentsline {subsubsection}{\numberline {2.1.2.4}setDeviceAddress()}{4}{subsubsection.2.1.2.4}%
+\contentsline {subsubsection}{\numberline {2.1.2.5}I2CInit()}{5}{subsubsection.2.1.2.5}%
+\contentsline {subsubsection}{\numberline {2.1.2.6}initiateWrite()}{5}{subsubsection.2.1.2.6}%
+\contentsline {subsubsection}{\numberline {2.1.2.7}burstWrite()}{5}{subsubsection.2.1.2.7}%
+\contentsline {subsubsection}{\numberline {2.1.2.8}initiateRead()}{6}{subsubsection.2.1.2.8}%
+\contentsline {subsubsection}{\numberline {2.1.2.9}burstRead()}{6}{subsubsection.2.1.2.9}%
+\contentsline {subsubsection}{\numberline {2.1.2.10}stopTransmission()}{7}{subsubsection.2.1.2.10}%
+\contentsline {section}{\numberline {2.2}I2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}1.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{7}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Example Documentation}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}I2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Setup\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Example.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{9}{section.3.1}%
+\contentsline {section}{\numberline {3.2}I2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Communication\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Example.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{9}{section.3.2}%
+\contentsline {chapter}{Index}{11}{section*.2}%

@@ -1,0 +1,12 @@
+\_form#0=195x33:\[
+\textnormal{bitRateRegister} = \frac{(\frac{F_oscillator}{F_desired} - 16)}{8}
+\]
+\_form#1=208x33:\[
+\textnormal{bitRateRegister} = \frac{(\frac{Freq_{oscillator}}{Freq_{desired}} - 16)}{8}
+\]
+\_form#2=208x33:\[
+\textnormal{bitRateRegister} = \frac{(\frac{Freq_{oscillator}}{Freq_{desired}} - 16)} {8}
+\]
+\_form#3=195x30:\[
+\textnormal{bitRateRegister} = \frac{(\frac{Foscillator}{Fdesired} - 16)} {8}
+\]

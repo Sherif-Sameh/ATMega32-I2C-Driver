@@ -1,0 +1,181 @@
+\hypertarget{_i2_c__1_8h}{}\doxysection{I2\+C\+\_\+1.\+h File Reference}
+\label{_i2_c__1_8h}\index{I2C\_1.h@{I2C\_1.h}}
+{\ttfamily \#include $<$avr/io.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_i2_c__1_8h_ac5c45928c8abdf4acf4c31848a84eef9}{set\+SCLFrequency}} (unsigned char bit\+Rate\+Register)
+\item 
+void \mbox{\hyperlink{_i2_c__1_8h_a77d5ab231e0a53538f7d54271dbf44bc}{enable\+TWI}} ()
+\item 
+void \mbox{\hyperlink{_i2_c__1_8h_a437af4e98f941f2349bb46dfb0e41044}{disable\+TWI}} ()
+\item 
+void \mbox{\hyperlink{_i2_c__1_8h_a75beea3d5edd6713c1b63c4cef689334}{set\+Device\+Address}} (char addr, char general\+Call)
+\item 
+void \mbox{\hyperlink{_i2_c__1_8h_a67aabf40410e32521087cbc48aa02ec8}{I2\+CInit}} ()
+\item 
+char \mbox{\hyperlink{_i2_c__1_8h_ac6aa5b5da98201902f9a09c2bdf5ec6e}{initiate\+Write}} (char addr)
+\item 
+char \mbox{\hyperlink{_i2_c__1_8h_a78c3dd979baf91e6a6a7048f8d6bca0b}{burst\+Write}} (char $\ast$data, char n)
+\item 
+char \mbox{\hyperlink{_i2_c__1_8h_aed70176ca59465e97b1078b3832aa0ec}{initiate\+Read}} (char addr)
+\item 
+char \mbox{\hyperlink{_i2_c__1_8h_a82e263e9b862af0677c4dad97ecef5a7}{burst\+Read}} (char $\ast$data, char n)
+\item 
+void \mbox{\hyperlink{_i2_c__1_8h_a350dd92eeaa9f216d2230b0628f9117b}{stop\+Transmission}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+I2\+C/\+TWI Driver. This is a driver for the I2\+C/\+TWI peripheral on the AVR 8 bit ATMega32 family of microcontrollers. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_i2_c__1_8h_ac5c45928c8abdf4acf4c31848a84eef9}\label{_i2_c__1_8h_ac5c45928c8abdf4acf4c31848a84eef9}} 
+\index{I2C\_1.h@{I2C\_1.h}!setSCLFrequency@{setSCLFrequency}}
+\index{setSCLFrequency@{setSCLFrequency}!I2C\_1.h@{I2C\_1.h}}
+\doxysubsubsection{\texorpdfstring{setSCLFrequency()}{setSCLFrequency()}}
+{\footnotesize\ttfamily void set\+SCLFrequency (\begin{DoxyParamCaption}\item[{unsigned char}]{bit\+Rate\+Register }\end{DoxyParamCaption})}
+
+This function is used to set the frequency of the SCL line according to the value of the bit\+Rate\+Register. 
+\begin{DoxyParams}{Parameters}
+{\em bit\+Rate\+Register} & This parameter is used to set the SCL frequency and should be chosen according to the following equation\+:  \[
+\textnormal{bitRateRegister} = \frac{(\frac{Foscillator}{Fdesired} - 16)} {8}
+\] \\
+\hline
+\end{DoxyParams}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_i2_c__setup_example_8cpp-example}{I2\+C\+\_\+\+Setup\+Example.\+cpp}}.\end{Desc}
+\mbox{\Hypertarget{_i2_c__1_8h_a77d5ab231e0a53538f7d54271dbf44bc}\label{_i2_c__1_8h_a77d5ab231e0a53538f7d54271dbf44bc}} 
+\index{I2C\_1.h@{I2C\_1.h}!enableTWI@{enableTWI}}
+\index{enableTWI@{enableTWI}!I2C\_1.h@{I2C\_1.h}}
+\doxysubsubsection{\texorpdfstring{enableTWI()}{enableTWI()}}
+{\footnotesize\ttfamily void enable\+TWI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function will enable the TWI and only needs to be called once in the setup. \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_i2_c__setup_example_8cpp-example}{I2\+C\+\_\+\+Setup\+Example.\+cpp}}.\end{Desc}
+\mbox{\Hypertarget{_i2_c__1_8h_a437af4e98f941f2349bb46dfb0e41044}\label{_i2_c__1_8h_a437af4e98f941f2349bb46dfb0e41044}} 
+\index{I2C\_1.h@{I2C\_1.h}!disableTWI@{disableTWI}}
+\index{disableTWI@{disableTWI}!I2C\_1.h@{I2C\_1.h}}
+\doxysubsubsection{\texorpdfstring{disableTWI()}{disableTWI()}}
+{\footnotesize\ttfamily void disable\+TWI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function will disable the TWI. \mbox{\Hypertarget{_i2_c__1_8h_a75beea3d5edd6713c1b63c4cef689334}\label{_i2_c__1_8h_a75beea3d5edd6713c1b63c4cef689334}} 
+\index{I2C\_1.h@{I2C\_1.h}!setDeviceAddress@{setDeviceAddress}}
+\index{setDeviceAddress@{setDeviceAddress}!I2C\_1.h@{I2C\_1.h}}
+\doxysubsubsection{\texorpdfstring{setDeviceAddress()}{setDeviceAddress()}}
+{\footnotesize\ttfamily void set\+Device\+Address (\begin{DoxyParamCaption}\item[{char}]{addr,  }\item[{char}]{general\+Call }\end{DoxyParamCaption})}
+
+This function sets the I2C address and general call recognition for the ATMega32 microcontroller. 
+\begin{DoxyParams}{Parameters}
+{\em addr} & This parameter represents the 7 bit I2C address. \\
+\hline
+{\em general\+Call} & This parameter sets the microcontroller\textquotesingle{}s response to general calls made on the I2C bus where 1 means that the microcontroller will respond to general calls and 0 it will ignore them. \\
+\hline
+\end{DoxyParams}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_i2_c__setup_example_8cpp-example}{I2\+C\+\_\+\+Setup\+Example.\+cpp}}.\end{Desc}
+\mbox{\Hypertarget{_i2_c__1_8h_a67aabf40410e32521087cbc48aa02ec8}\label{_i2_c__1_8h_a67aabf40410e32521087cbc48aa02ec8}} 
+\index{I2C\_1.h@{I2C\_1.h}!I2CInit@{I2CInit}}
+\index{I2CInit@{I2CInit}!I2C\_1.h@{I2C\_1.h}}
+\doxysubsubsection{\texorpdfstring{I2CInit()}{I2CInit()}}
+{\footnotesize\ttfamily void I2\+CInit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function initializes the I2C peripheral with some default settings where\+: F\+\_\+\+SCL = 400Khz, Device address = 0x32, and General calls are ignored. \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_i2_c__communication_example_8cpp-example}{I2\+C\+\_\+\+Communication\+Example.\+cpp}}, and \mbox{\hyperlink{_i2_c__setup_example_8cpp-example}{I2\+C\+\_\+\+Setup\+Example.\+cpp}}.\end{Desc}
+\mbox{\Hypertarget{_i2_c__1_8h_ac6aa5b5da98201902f9a09c2bdf5ec6e}\label{_i2_c__1_8h_ac6aa5b5da98201902f9a09c2bdf5ec6e}} 
+\index{I2C\_1.h@{I2C\_1.h}!initiateWrite@{initiateWrite}}
+\index{initiateWrite@{initiateWrite}!I2C\_1.h@{I2C\_1.h}}
+\doxysubsubsection{\texorpdfstring{initiateWrite()}{initiateWrite()}}
+{\footnotesize\ttfamily char initiate\+Write (\begin{DoxyParamCaption}\item[{char}]{addr }\end{DoxyParamCaption})}
+
+This function will try to take control of the I2C bus and make a write request to the address specified. 
+\begin{DoxyParams}{Parameters}
+{\em addr} & This parameter represents the 7 bit I2C address of the target device. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Will return 1 if it was successful and 0 otherwise. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_i2_c__communication_example_8cpp-example}{I2\+C\+\_\+\+Communication\+Example.\+cpp}}.\end{Desc}
+\mbox{\Hypertarget{_i2_c__1_8h_a78c3dd979baf91e6a6a7048f8d6bca0b}\label{_i2_c__1_8h_a78c3dd979baf91e6a6a7048f8d6bca0b}} 
+\index{I2C\_1.h@{I2C\_1.h}!burstWrite@{burstWrite}}
+\index{burstWrite@{burstWrite}!I2C\_1.h@{I2C\_1.h}}
+\doxysubsubsection{\texorpdfstring{burstWrite()}{burstWrite()}}
+{\footnotesize\ttfamily char burst\+Write (\begin{DoxyParamCaption}\item[{char $\ast$}]{data,  }\item[{char}]{n }\end{DoxyParamCaption})}
+
+This function will load n bytes into the TWDR serially till all the data specified has been written to the target device. 
+\begin{DoxyParams}{Parameters}
+{\em data} & This parameter is a pointer to the start of the array of bytes that will be sent. \\
+\hline
+{\em n} & This parameter represents the number of bytes to send and should be less than or equal to the length of the byte array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAttention}{Attention}
+This function must be preceded by a call to \mbox{\hyperlink{_i2_c__1_8h_ac6aa5b5da98201902f9a09c2bdf5ec6e}{initiate\+Write(char addr)}}. 
+\end{DoxyAttention}
+\begin{DoxyReturn}{Returns}
+Will return 1 if it was successful and 0 otherwise. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_i2_c__1_8h_ac6aa5b5da98201902f9a09c2bdf5ec6e}{initiate\+Write(char addr)}} 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_i2_c__communication_example_8cpp-example}{I2\+C\+\_\+\+Communication\+Example.\+cpp}}.\end{Desc}
+\mbox{\Hypertarget{_i2_c__1_8h_aed70176ca59465e97b1078b3832aa0ec}\label{_i2_c__1_8h_aed70176ca59465e97b1078b3832aa0ec}} 
+\index{I2C\_1.h@{I2C\_1.h}!initiateRead@{initiateRead}}
+\index{initiateRead@{initiateRead}!I2C\_1.h@{I2C\_1.h}}
+\doxysubsubsection{\texorpdfstring{initiateRead()}{initiateRead()}}
+{\footnotesize\ttfamily char initiate\+Read (\begin{DoxyParamCaption}\item[{char}]{addr }\end{DoxyParamCaption})}
+
+This function will try to take control of the I2C bus and make a read request from the address specified. 
+\begin{DoxyParams}{Parameters}
+{\em addr} & This parameter represents the 7 bit I2C address of the target device. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Will return 1 if it was successful and 0 otherwise. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_i2_c__communication_example_8cpp-example}{I2\+C\+\_\+\+Communication\+Example.\+cpp}}.\end{Desc}
+\mbox{\Hypertarget{_i2_c__1_8h_a82e263e9b862af0677c4dad97ecef5a7}\label{_i2_c__1_8h_a82e263e9b862af0677c4dad97ecef5a7}} 
+\index{I2C\_1.h@{I2C\_1.h}!burstRead@{burstRead}}
+\index{burstRead@{burstRead}!I2C\_1.h@{I2C\_1.h}}
+\doxysubsubsection{\texorpdfstring{burstRead()}{burstRead()}}
+{\footnotesize\ttfamily char burst\+Read (\begin{DoxyParamCaption}\item[{char $\ast$}]{data,  }\item[{char}]{n }\end{DoxyParamCaption})}
+
+This function will read n bytes from the TWDR serially till all the data specified has been read from the target device. 
+\begin{DoxyParams}{Parameters}
+{\em data} & This parameter is a pointer to the start of the array of bytes that will be used to store the incoming data. \\
+\hline
+{\em n} & This parameter represents the number of bytes to read and should be less than or equal to the length of the byte array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAttention}{Attention}
+This function must be preceded by a call to \mbox{\hyperlink{_i2_c__1_8h_aed70176ca59465e97b1078b3832aa0ec}{initiate\+Read(char addr)}}. 
+\end{DoxyAttention}
+\begin{DoxyReturn}{Returns}
+Will return 1 if it was successful and 0 otherwise. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{_i2_c__1_8h_aed70176ca59465e97b1078b3832aa0ec}{initiate\+Read(char addr)}} 
+\end{DoxySeeAlso}
+\begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_i2_c__communication_example_8cpp-example}{I2\+C\+\_\+\+Communication\+Example.\+cpp}}.\end{Desc}
+\mbox{\Hypertarget{_i2_c__1_8h_a350dd92eeaa9f216d2230b0628f9117b}\label{_i2_c__1_8h_a350dd92eeaa9f216d2230b0628f9117b}} 
+\index{I2C\_1.h@{I2C\_1.h}!stopTransmission@{stopTransmission}}
+\index{stopTransmission@{stopTransmission}!I2C\_1.h@{I2C\_1.h}}
+\doxysubsubsection{\texorpdfstring{stopTransmission()}{stopTransmission()}}
+{\footnotesize\ttfamily void stop\+Transmission (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function is used to trigger the I2C stop signal which ends the ongoing communication and frees the I2C bus. \begin{Desc}
+\item[Examples]\par
+\mbox{\hyperlink{_i2_c__communication_example_8cpp-example}{I2\+C\+\_\+\+Communication\+Example.\+cpp}}.\end{Desc}

@@ -1,0 +1,36 @@
+\hypertarget{_i2_c__communication_example_8cpp-example}{}\doxysection{I2\+C\+\_\+\+Communication\+Example.\+cpp}
+An example of how to use the I2C driver for readings and writing bytes from and to a target device.
+
+
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_i2_c__1_8h}{I2C\_1.h}}"{}}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#define TARGET\_ADDRESS 0x34}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int} main(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keywordtype}{char} status = 0;}
+\DoxyCodeLine{    \textcolor{keywordtype}{char} dataOut[3] = \{\textcolor{charliteral}{'a'}, \textcolor{charliteral}{'r'}, \textcolor{charliteral}{'m'}\};}
+\DoxyCodeLine{    \textcolor{keywordtype}{char} dataIn;}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \textcolor{comment}{/* Initialize TWI */}}
+\DoxyCodeLine{    \mbox{\hyperlink{_i2_c__1_8h_a67aabf40410e32521087cbc48aa02ec8}{I2CInit}}();}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \textcolor{comment}{/* Write 3 bytes to the target device */}}
+\DoxyCodeLine{    status = \mbox{\hyperlink{_i2_c__1_8h_ac6aa5b5da98201902f9a09c2bdf5ec6e}{initiateWrite}}(TARGET\_ADDRESS);}
+\DoxyCodeLine{    \textcolor{keywordflow}{if}(status)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        status = \mbox{\hyperlink{_i2_c__1_8h_a78c3dd979baf91e6a6a7048f8d6bca0b}{burstWrite}}(dataOut, 3);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \textcolor{comment}{/* Read 1 byte from the target device */}}
+\DoxyCodeLine{    status = \mbox{\hyperlink{_i2_c__1_8h_aed70176ca59465e97b1078b3832aa0ec}{initiateRead}}(TARGET\_ADDRESS); \textcolor{comment}{// Initiates a repeated start without releasing control of the I2C bus.}}
+\DoxyCodeLine{    \textcolor{keywordflow}{if}(status)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        status = \mbox{\hyperlink{_i2_c__1_8h_a82e263e9b862af0677c4dad97ecef5a7}{burstRead}}(\&dataIn, 1);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    \mbox{\hyperlink{_i2_c__1_8h_a350dd92eeaa9f216d2230b0628f9117b}{stopTransmission}}();}
+\DoxyCodeLine{    }
+
+\end{DoxyCodeInclude}
+ 

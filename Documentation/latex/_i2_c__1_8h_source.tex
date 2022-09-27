@@ -1,0 +1,32 @@
+\hypertarget{_i2_c__1_8h_source}{}\doxysection{I2\+C\+\_\+1.\+h}
+\mbox{\hyperlink{_i2_c__1_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#ifndef I2C\_1\_H}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#define I2C\_1\_H}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <avr/io.h>}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{19 \textcolor{keywordtype}{void} \mbox{\hyperlink{_i2_c__1_8h_ac5c45928c8abdf4acf4c31848a84eef9}{setSCLFrequency}} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} bitRateRegister);}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{24 \textcolor{keywordtype}{void} \mbox{\hyperlink{_i2_c__1_8h_a77d5ab231e0a53538f7d54271dbf44bc}{enableTWI}} ();}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{29 \textcolor{keywordtype}{void} \mbox{\hyperlink{_i2_c__1_8h_a437af4e98f941f2349bb46dfb0e41044}{disableTWI}} ();}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{37 \textcolor{keywordtype}{void} \mbox{\hyperlink{_i2_c__1_8h_a75beea3d5edd6713c1b63c4cef689334}{setDeviceAddress}}(\textcolor{keywordtype}{char} addr, \textcolor{keywordtype}{char} generalCall);}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{43 \textcolor{keywordtype}{void} \mbox{\hyperlink{_i2_c__1_8h_a67aabf40410e32521087cbc48aa02ec8}{I2CInit}}();}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{50 \textcolor{keywordtype}{char} \mbox{\hyperlink{_i2_c__1_8h_ac6aa5b5da98201902f9a09c2bdf5ec6e}{initiateWrite}} (\textcolor{keywordtype}{char} addr);}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{62 \textcolor{keywordtype}{char} \mbox{\hyperlink{_i2_c__1_8h_a78c3dd979baf91e6a6a7048f8d6bca0b}{burstWrite}}(\textcolor{keywordtype}{char} *data, \textcolor{keywordtype}{char} n);}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{69 \textcolor{keywordtype}{char} \mbox{\hyperlink{_i2_c__1_8h_aed70176ca59465e97b1078b3832aa0ec}{initiateRead}} (\textcolor{keywordtype}{char} addr);}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{81 \textcolor{keywordtype}{char} \mbox{\hyperlink{_i2_c__1_8h_a82e263e9b862af0677c4dad97ecef5a7}{burstRead}}(\textcolor{keywordtype}{char}* data, \textcolor{keywordtype}{char} n);}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{86 \textcolor{keywordtype}{void} \mbox{\hyperlink{_i2_c__1_8h_a350dd92eeaa9f216d2230b0628f9117b}{stopTransmission}}();}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

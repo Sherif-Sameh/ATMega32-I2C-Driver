@@ -1,0 +1,21 @@
+\hypertarget{_i2_c__setup_example_8cpp-example}{}\doxysection{I2\+C\+\_\+\+Setup\+Example.\+cpp}
+An example on how to initialize the TWI before starting communication.
+
+
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_i2_c__1_8h}{I2C\_1.h}}"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int} main(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{comment}{/* Initialize with default settings */}}
+\DoxyCodeLine{    \mbox{\hyperlink{_i2_c__1_8h_a67aabf40410e32521087cbc48aa02ec8}{I2CInit}}();}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \textcolor{comment}{/* Or initialize with custom settings */}}
+\DoxyCodeLine{    \mbox{\hyperlink{_i2_c__1_8h_a77d5ab231e0a53538f7d54271dbf44bc}{enableTWI}}();}
+\DoxyCodeLine{    \mbox{\hyperlink{_i2_c__1_8h_a75beea3d5edd6713c1b63c4cef689334}{setDeviceAddress}}(0x52, 1); \textcolor{comment}{// 7 bit address = 0x52 and General call recognition is enabled.}}
+\DoxyCodeLine{    \mbox{\hyperlink{_i2_c__1_8h_ac5c45928c8abdf4acf4c31848a84eef9}{setSCLFrequency}}(18); \textcolor{comment}{// SCL Frequency = 100Khz.}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCodeInclude}
+ 
